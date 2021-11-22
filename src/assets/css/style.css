@@ -14,7 +14,7 @@ body {
 }
 
 .wl_table {
-    width: 1000px;
+    width: 100%;
     padding: 10px;
 }
 .wl-toobler {
@@ -24,3 +24,87 @@ body {
 .wl-toobler button{
     float: left;
 }
+.wl_container {
+    width: 100%;
+    margin-bottom: 48px;
+    background-color: white;
+    padding: 10px;
+}
+/* Header 头*/
+.wl_Header {
+    height: 48px;
+    padding: 0px;
+    height: 48px;
+    line-height: 48px;
+    width: 100%;
+    z-index: 100;
+    right: 0px;
+    background-color: #001529;
+    padding: 0px 25px;
+    display: flex;
+}
+.logo{
+    display: flex;
+
+}
+.logo img {
+    width: 25px;
+    height: 25px;
+    filter:brightness(170%);
+    -webkit-transform:translateY(42%);
+}
+.wl_name{
+    height: 32px;
+    margin: 0 0 0 12px;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 48px;
+}
+.wl_manage {
+    height: 100%;
+    line-height: 48px;
+    cursor: pointer;
+    color: white;
+}
+/* Header 头*/
+/* 导航栏 */
+.wl_sidebar > ul {
+    height: calc(100% - 90px);
+}
+/* 设置滚动条 */
+.wl_sidebar > ul::-webkit-scrollbar-track-piece {
+    background-color: rgba(0, 0, 0, 0);
+    border-left: 1px solid rgba(0, 0, 0, 0);
+}
+.wl_sidebar > ul::-webkit-scrollbar {
+    width: 6px;
+}
+.wl_sidebar > ul::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.15);
+    background-clip: padding-box;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.wl_sidebar-button {
+    height: 80px;
+    width: 100%;
+}
+.wl_sidebar-button ul{
+    height: 43px;
+    line-height: 36px;
+    cursor: pointer;
+}
+.wl_sidebar-button li{
+    text-align: left;
+    margin-left: 15px;
+    list-style-type:none;
+}
+.wl_sidebar-button li:hover{
+    color: #1060cd;
+}
+.wl_sidebar-button span:hover{
+    color: #1060cd;
+}
+/* 导航栏 */

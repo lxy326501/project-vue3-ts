@@ -1,8 +1,9 @@
 <template>
     <div class="wl_global">
-        <vSiber />
-        <div class="wl_content">
-            <div class="wl_container">
+        <vHeader></vHeader>
+        <div class="wl_main">
+            <vSiber></vSiber>
+            <div class="wl_content">
                 <router-view></router-view>
             </div>
         </div>
@@ -10,32 +11,25 @@
 </template>
 
 <script setup lang="ts">
-    import vSiber from '../components/common/Sidebar.vue'
+    import vHeader from '../components/Common/Header.vue'
+    import vSiber from '../components/Common/Sidebar.vue'
 </script>
 
 <style>
     .wl_global {
         width: 100%;
         height: 100%;
-        overflow: hidden
+        overflow: hidden;
+        background-color: #f0f0f0;
+    }
+    .wl_main {
+        display: flex;
+        height: 100%;
+        width: 100%;
     }
     .wl_content {
-        position: absolute;
-        left: 250px;
-        right: 0;
-        top: 70px;
-        bottom: 0;
-        padding-bottom: 30px;
-        -webkit-transition: left .3s ease-in-out;
-        transition: left .3s ease-in-out;
-        background: #f0f0f0;
-        padding: 10px;
-    }
-    .wl_container {
-        padding: 30px;
-        background: #fff;
-        background-color: white;
-        border: 1px solid #ddd;
-        border-radius: 5px;
+        padding: 24px;
+        width: 100%;
+        overflow-y: auto;
     }
 </style>

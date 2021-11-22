@@ -1,15 +1,17 @@
 <template>
-    <div class="wl-toobler">
-        <a-button type="primary" ghost @click="switchTables">{{ msg }}</a-button>
-    </div>
-    <div class="wl_table">
-        <component :is="getComponent" />
+    <div class="wl_container">
+        <div class="wl-toobler">
+            <a-button type="primary" ghost @click="switchTables">{{ msg }}</a-button>
+        </div>
+        <div class="wl_table">
+            <component :is="getComponent" />
+        </div>
     </div>
 </template>
 
 <script setup lang="ts">
-import a_table from '@/components/tables/a_table.vue'
-import e_table from '@/components/tables/e_table.vue'
+import a_table from '@/components/Tables/a-table'
+import e_table from '@/components/Tables/e-table'
 import { ref, computed } from 'vue'
 
 const msg = ref<String>('Element')

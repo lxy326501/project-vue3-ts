@@ -1,9 +1,11 @@
 <template>
-    <div id="customerChart" ref="myChart" :style="{ width: '300px', height: '300px' }"></div>
-    <div>{{ count }}</div>
-    <button @click="buttonClick">按钮</button>
-    <div>{{ props.msg }}</div>
-    <Login></Login>
+    <div class="wl_container">
+        <div id="customerChart" ref="myChart" :style="{ width: '300px', height: '300px' }"></div>
+        <div>{{ count }}</div>
+        <button @click="buttonClick">按钮</button>
+        <div>{{ props.msg }}</div>
+        <Login></Login>
+    </div>
 </template>
 
 <script setup lang="ts">

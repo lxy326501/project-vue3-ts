@@ -1,6 +1,7 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router";
 import Home from "../views/Home.vue";
 
+// @ts-ignore
 const routes: Array<RouteRecordRaw> = [
     {
         path: "/",
@@ -18,7 +19,7 @@ const routes: Array<RouteRecordRaw> = [
             },{
                 path: "/siber",
                 name: "Siber",
-                component: () => import(/* webpackChunkName: "about" */ "../components/common/Sidebar.vue")
+                component: () => import(/* webpackChunkName: "about" */ "../components/Common/Sidebar.vue")
             }
         ]
     },
