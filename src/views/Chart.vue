@@ -1,52 +1,63 @@
 <template>
-    <div class="wl_container">
-        <div id="customerChart" ref="myChart" :style="{ width: '300px', height: '300px' }"></div>
-        <div>{{ count }}</div>
-        <button @click="buttonClick">按钮</button>
-        <div>{{ props.msg }}</div>
-        <Login></Login>
+    <div class="wl_container-chart-one">
+        <div class="wl_container-map">
+            <a-card title="实时监控情况" style="text-align: left;width: 100%;" bodyStyle="padding: 10px">
+                <China />
+            </a-card>
+        </div>
+        <div class="wl_container-thrend">
+            <div>
+                <a-card title="情况预测" style="text-align: left;width: 100%;" bodyStyle="padding: 10px;">
+                    <Thrend />
+                </a-card>
+            </div>
+            <div :style="{marginTop: '15px'}">
+                <a-card title="人员效率" style="text-align: left;width: 100%;" bodyStyle="padding: 10px;">
+                    <Effic />
+                </a-card>
+            </div>
+        </div>
+    </div>
+    <div class="wl_container-chart-two">
+        <div class="wl_container-radio">
+            <a-card title="各类占比" style="text-align: left;width: 100%;" bodyStyle="padding: 10px;display: flex;">
+                <Ration value="20" id="radio1" color="#58D9F9" />
+                <Ration value="33" id="radio2" color="#f9b137" />
+                <Ration value="62" id="radio3" color="#42c568" />
+            </a-card>
+        </div>
+        <div class="wl_container-keyword">
+
+        </div>
     </div>
 </template>
 
 <script setup lang="ts">
-import Login from "./login.vue"
-import { ref,reactive,getCurrentInstance,onMounted } from 'vue'
-import { OBJ } from "#/chart";
-//chart display
-const count = ref(0)
-const myChart = ref<any>()
-const echarts = getCurrentInstance()?.appContext.config.globalProperties.$echarts
-const setChart = ()=>{
-    myChart.value = echarts.init(document.getElementById('customerChart') as HTMLElement);
-    myChart.value.setOption({
-        title: { text: "总用户量" },
-        tooltip: {},
-        xAxis: {
-            data: ["12-3", "12-4", "12-5", "12-6", "12-7", "12-8"],
-        },
-        yAxis: {},
-        series: [
-            {
-                name: "用户量",
-                type: "line",
-                data: [5, 20, 36, 10, 10, 20],
-            },
-        ],
-    });
-}
-onMounted(setChart)
-const buttonClick = () => { count.value++ }
-
-//get porops
-const props = defineProps<{msg?: string,data? :Object }>()
-const obj = reactive({
-    count: {
-        data: [0,1,2,3],
-    }
-}) as OBJ
-
+    import China from "@/components/Chart/chart-map";
+    import Thrend from "@/components/Chart/chart-trend";
+    import Effic from "@/components/Chart/chart-effic"
+    import Ration from "@/components/Chart/chart-ratio";
 </script>
 
 <style scoped>
-
+    .wl_container-chart-one {
+        display: flex;
+    }
+    .wl_container-chart-two {
+        display: flex;
+    }
+    .wl_container-map {
+        width: 76%;
+        background-color: white;
+        margin: 10px 0;
+    }
+    .wl_container-radio {
+        width: 50%;
+        background-color: white;
+        margin: 10px 0;
+    }
+    .wl_container-thrend {
+        margin: 10px 0px 10px 20px;
+        height: 100% ;
+    }
 </style>

@@ -40,7 +40,7 @@ export default defineComponent({
                 dataIndex: 'address',
                 key: 'address',
             },
-        ]
+        ] as Array<Object>
         return () => h(
             <a-table dataSource={dataSource} columns={columns} />
         )

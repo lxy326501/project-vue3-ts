@@ -19,7 +19,11 @@ const routes: Array<RouteRecordRaw> = [
             },{
                 path: "/siber",
                 name: "Siber",
-                component: () => import(/* webpackChunkName: "about" */ "../components/Common/Sidebar.vue")
+                component: () => import(/* webpackChunkName: "about" */ "../common/Sidebar.vue")
+            },{
+                path: "/layout",
+                name: "Layout",
+                component: () => import(/* webpackChunkName: "about" */ "../components/Chart/chart-trend")
             }
         ]
     },

@@ -11,8 +11,8 @@
 </template>
 
 <script setup lang="ts">
-    import vHeader from '../components/Common/Header.vue'
-    import vSiber from '../components/Common/Sidebar.vue'
+    import vHeader from '../common/Header.vue'
+    import vSiber from '../common/Sidebar.vue'
 </script>
 
 <style>
@@ -31,5 +31,6 @@
         padding: 24px;
         width: 100%;
         overflow-y: auto;
+        margin-bottom: 30px;
     }
 </style>

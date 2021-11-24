@@ -40,7 +40,7 @@ body {
     z-index: 100;
     right: 0px;
     background-color: #001529;
-    padding: 0px 25px;
+    padding: 0 50px 0 16px;
     display: flex;
 }
 .logo{
@@ -63,8 +63,12 @@ body {
 }
 .wl_manage {
     height: 100%;
-    line-height: 48px;
     cursor: pointer;
+    color: white;
+}
+.wl_title-manage{
+    padding: 0 12px;
+    height: 100%;
     color: white;
 }
 /* Header 头*/

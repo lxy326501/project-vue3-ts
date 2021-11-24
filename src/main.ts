@@ -13,6 +13,6 @@ const app = createApp(App);
 app.config.globalProperties.$echarts = echarts
 
 app.use(router)
-   .use(ElementPlus)
-   .use(Antd)
-   .mount('#app')
+    .use(ElementPlus)
+    .use(Antd)
+    .mount('#app')
